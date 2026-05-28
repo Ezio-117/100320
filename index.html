@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青岛谦腾能源化工有限公司 - PVC EVA 己二酸 PET瓶片专业供应商</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0F52BA;
+        }
+
+        .menu a {
+            margin-left: 35px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #0F52BA;
+        }
+
+        /* Banner 首屏 */
+        .banner {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(135deg, #f7f9fc 0%, #e6edf8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 背景装饰线条 */
+        .banner::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(15, 82, 186, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(15, 82, 186, 0.1);
+            border-radius: 50%;
+            bottom: -150px;
+            right: -150px;
+        }
+
+        .banner h1 {
+            font-size: 44px;
+            color: #0F52BA;
+            margin-bottom: 18px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .banner p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.6s;
+        }
+
+        /* 模块标题 */
+        .section-title {
+            font-size: 32px;
+            color: #0F52BA;
+            text-align: center;
+            margin: 100px 0 50px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .section-title.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 关于我们 */
+        .about {
+            padding: 0 0 100px 0;
+            text-align: center;
+            font-size: 17px;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .about.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 产品卡片 */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding-bottom: 120px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(15, 82, 186, 0.1);
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            color: #0F52BA;
+            margin-bottom: 12px;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* 底部 */
+        footer {
+            background: #0F52BA;
+            color: #fff;
+            text-align: center;
+            padding: 35px 0;
+            font-size: 15px;
+        }
+
+        /* 动画关键帧 */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+            .banner h1 {
+                font-size: 32px;
+            }
+            .menu a {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 导航 -->
+    <header>
+        <div class="container nav">
+            <div class="logo">青岛谦腾能源化工有限公司</div>
+            <div class="menu">
+                <a href="#home">首页</a>
+                <a href="#about">关于我们</a>
+                <a href="#products">产品</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页Banner -->
+    <section class="banner" id="home">
+        <div>
+            <h1>青岛谦腾能源化工有限公司</h1>
+            <p>专业供应 PVC / EVA / 己二酸 / PET瓶片</p>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <h2 class="section-title" id="about">关于我们</h2>
+    <section class="about container">
+        青岛谦腾能源化工有限公司专注于化工原料及塑料产品的销售与服务，主营PVC、EVA、己二酸、PET瓶片等产品。
+        公司始终坚持诚信经营、品质优先、合作共赢的理念，为客户提供稳定可靠的货源与专业高效的服务，
+        与国内多家大型生产企业保持长期稳定合作关系，业务覆盖全国各地区。
+    </section>
+
+    <!-- 产品中心 -->
+    <h2 class="section-title" id="products">产品中心</h2>
+    <section class="container products">
+        <div class="product-card" onclick="alert('PVC 产品详情')">
+            <h3>PVC 树脂</h3>
+            <p>工业级 / 通用级</p>
+        </div>
+        <div class="product-card" onclick="alert('EVA 产品详情')">
+            <h3>EVA 树脂</h3>
+            <p>发泡级 / 薄膜级</p>
+        </div>
+        <div class="product-card" onclick="alert('己二酸 产品详情')">
+            <h3>己二酸</h3>
+            <p>工业级 / 精己二酸</p>
+        </div>
+        <div class="product-card" onclick="alert('PET瓶片 产品详情')">
+            <h3>PET瓶片</h3>
+            <p>净片 / 冷水片 / 热水片</p>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        © 2025 青岛谦腾能源化工有限公司 版权所有
+    </footer>
+
+    <!-- 滚动动画JS -->
+    <script>
+        // 监听滚动，给元素添加show类，实现慢慢出现效果
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // 所有需要动画的元素
+        document.querySelectorAll('.section-title, .about, .product-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -171,6 +171,63 @@
             background: #0d47a3;
         }
 
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.18s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+            font-size: 0;
+            background: transparent;
+        }
+
+        .card-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .card-body {
+            padding: 14px 16px 20px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: #0F52BA;
+            margin-bottom: 8px;
+            min-height: 22px;
+        }
+
+        .card-manufacturer {
+            font-size: 14px;
+            color: #666;
+            min-height: 18px;
+        }
+
         footer {
             background: #0F52BA;
             color: #fff;
@@ -182,6 +239,10 @@
         @media (max-width: 992px) {
             .detail-main {
                 grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .detail-actions {
@@ -196,6 +257,10 @@
 
             .detail-title {
                 font-size: 28px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -216,33 +281,35 @@
         <nav class="breadcrumb"> <a href="index.html">首页</a> / <a href="index.html#products">产品中心</a> / EVA树脂 </nav>
         <h1 class="detail-title">EVA树脂</h1>
 
-        <div class="detail-main">
-            <div class="detail-image">
-                <img src="img/eva.jpg" alt="EVA树脂" />
-            </div>
-            <div class="detail-info">
-                <div class="detail-meta">
-                    <h2>产品型号</h2>
-                    <p>EVA-280、EVA-400</p>
-                </div>
-                <div class="detail-meta">
-                    <h2>产品简介</h2>
-                    <p>此处填写产品简介内容，后续替换为真实描述。</p>
-                </div>
-                <div class="detail-meta">
-                    <h2>应用领域</h2>
-                    <ul>
-                        <li>应用领域 1</li>
-                        <li>应用领域 2</li>
-                        <li>应用领域 3</li>
-                    </ul>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="card-image"><img src="img/eva1.jpg" alt="EVA 1"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：联泓新材料</h3>
+                    <p class="card-manufacturer">型号：FL02528, UL00628, UL01833, UL00428</p>
                 </div>
             </div>
-        </div>
-
-        <div class="detail-description">
-            <h2>详细说明</h2>
-            <p>此处填写详细说明内容，后续替换为完整文本。</p>
+            <div class="product-card">
+                <div class="card-image"><img src="img/eva2.jpg" alt="EVA 2"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：扬子石化-巴斯夫</h3>
+                    <p class="card-manufacturer">型号：V4110D, V3110F, V5110F, V4610H, V3510K</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/eva3.jpg" alt="EVA 3"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：斯尔邦石化</h3>
+                    <p class="card-manufacturer">型号：</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/eva4.jpg" alt="EVA 4"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：宝丰</h3>
+                    <p class="card-manufacturer">型号：</p>
+                </div>
+            </div>
         </div>
 
         <div class="detail-actions">

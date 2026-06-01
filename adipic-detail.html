@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>青岛谦腾能源化工有限公司 - 乙二酸详情</title>
+    <title>青岛谦腾能源化工有限公司 - 草酸详情</title>
     <style>
         * {
             margin: 0;
@@ -171,6 +171,63 @@
             background: #0d47a3;
         }
 
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.18s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+            font-size: 0;
+            background: transparent;
+        }
+
+        .card-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .card-body {
+            padding: 14px 16px 20px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: #0F52BA;
+            margin-bottom: 8px;
+            min-height: 22px; /* reserve space for model */
+        }
+
+        .card-manufacturer {
+            font-size: 14px;
+            color: #666;
+            min-height: 18px; /* reserve space for manufacturer */
+        }
+
         footer {
             background: #0F52BA;
             color: #fff;
@@ -213,29 +270,50 @@
     </header>
 
     <div class="container">
-        <nav class="breadcrumb"> <a href="index.html">首页</a> / <a href="index.html#products">产品中心</a> / 乙二酸 </nav>
-        <h1 class="detail-title">乙二酸</h1>
+        <nav class="breadcrumb"> <a href="index.html">首页</a> / <a href="index.html#products">产品中心</a> / 草酸 </nav>
+        <h1 class="detail-title">草酸</h1>
 
-        <div class="detail-main">
-            <div class="detail-image">
-                <img src="img/adipic.jpg" alt="乙二酸" />
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic1.jpg" alt="草酸 1"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
+                </div>
             </div>
-            <div class="detail-info">
-                <div class="detail-meta">
-                    <h2>产品型号</h2>
-                    <p>工业级、精乙二酸</p>
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic2.jpg" alt="草酸 2"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
                 </div>
-                <div class="detail-meta">
-                    <h2>产品简介</h2>
-                    <p>此处填写产品简介内容，后续替换为真实描述。</p>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic3.jpg" alt="草酸 3"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
                 </div>
-                <div class="detail-meta">
-                    <h2>应用领域</h2>
-                    <ul>
-                        <li>应用领域 1</li>
-                        <li>应用领域 2</li>
-                        <li>应用领域 3</li>
-                    </ul>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic4.jpg" alt="草酸 4"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic5.jpg" alt="草酸 5"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image"><img src="img/adipic6.jpg" alt="草酸 6"></div>
+                <div class="card-body">
+                    <h3 class="card-title">厂家：</h3>
+                    <p class="card-manufacturer">型号：</p>
                 </div>
             </div>
         </div>

@@ -32,21 +32,48 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
+            left: 0;
+            width: 100%;
+            height: 64px;
             z-index: 100;
             transition: all 0.3s ease;
         }
 
         .nav {
+            position: relative;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             padding: 20px 0;
+        }
+
+        .container.nav {
+            padding-left: 140px; /* leave space for absolute logo */
+            padding-right: 140px; /* leave space for absolute menu */
+            height: 64px;
+            display: flex;
+            align-items: center;
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: #0F52BA;
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            max-width: calc(100% - 32px);
+            word-break: break-word;
+        }
+
+        .menu {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
         }
 
         .menu a {
@@ -57,9 +84,13 @@
             transition: color 0.3s ease;
         }
 
-        .menu a:hover {
-            color: #0F52BA;
-        }
+        .menu a:first-child { margin-left: 0; }
+
+        .menu a:hover { color: #0F52BA; }
+
+        html, body { height: 100%; }
+        body { display: flex; flex-direction: column; min-height: 100vh; }
+        .main { flex: 1; }
 
         /* Banner 首屏 */
         .banner {
@@ -206,6 +237,11 @@
             text-align: center;
             padding: 35px 0;
             font-size: 15px;
+            position: relative;
+            box-sizing: border-box;
+            width: 100vw;
+            left: 50%;
+            margin-left: -50vw;
         }
 
         /* 动画关键帧 */
@@ -224,6 +260,16 @@
         }
 
         @media (max-width: 576px) {
+            .container.nav {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+
             .products {
                 grid-template-columns: 1fr;
             }
@@ -241,8 +287,8 @@
 
     <!-- 导航 -->
     <header>
+        <div class="logo">青岛谦腾能源化工有限公司</div>
         <div class="container nav">
-            <div class="logo">青岛谦腾能源化工有限公司</div>
             <div class="menu">
                 <a href="#home">首页</a>
                 <a href="#about">关于我们</a>
@@ -252,6 +298,7 @@
     </header>
 
     <!-- 首页Banner -->
+    <main class="main">
     <section class="banner" id="home">
         <div>
             <h1>青岛谦腾能源化工有限公司</h1>
@@ -281,9 +328,10 @@
   </a>
   <a class="product-card" href="pet-detail.html">
     <h3>PET瓶片</h3>
-    <p>净片 / 冷水片 / 热水片</p>
+    <p>水 / 油 / 热 / 碳酸</p>
   </a>
 </section>
+    </main>
     <!-- 底部 -->
     <footer>
         © 2026 青岛谦腾能源化工有限公司 版权所有

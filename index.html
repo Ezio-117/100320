@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青岛谦腾能源化工有限公司 - PVC EVA 己二酸 PET瓶片专业供应商</title>
+    <link rel="preload" as="image" href="首页背景图.jpg">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.8;
-            overflow-x: hidden;
+            background: #f8fbff;
+            color: #111;
+            line-height: 1.75;
+            min-height: 100vh;
         }
 
         .container {
@@ -25,352 +30,520 @@
             margin: 0 auto;
         }
 
-        /* 导航栏 */
         header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 64px;
-            z-index: 100;
-            transition: all 0.3s ease;
+            z-index: 30;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid rgba(0, 87, 204, 0.08);
         }
 
-        .nav {
-            position: relative;
+        .topbar {
             display: flex;
             align-items: center;
-            padding: 20px 0;
+            justify-content: space-between;
+            gap: 18px;
+            min-height: 72px;
+            padding: 0 8px;
         }
 
-        .container.nav {
-            padding-left: 140px; /* leave space for absolute logo */
-            padding-right: 140px; /* leave space for absolute menu */
-            height: 64px;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
+        .brand {
+            color: #0057CC;
             font-size: 24px;
-            font-weight: bold;
-            color: #0F52BA;
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
+            font-weight: 800;
+            letter-spacing: 0.04em;
             text-align: left;
-            max-width: calc(100% - 32px);
-            word-break: break-word;
         }
 
-        .menu {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+        .nav-menu {
             display: flex;
             align-items: center;
+            gap: 24px;
+            margin-left: auto;
+            flex-wrap: wrap;
         }
 
-        .menu a {
-            margin-left: 35px;
-            text-decoration: none;
-            color: #333;
+        .lang-zh .lang-en,
+        .lang-en .lang-zh {
+            display: none;
+        }
+
+        .lang-toggle {
+            border: none;
+            background: transparent;
+            color: #111;
             font-size: 16px;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 6px 0;
         }
 
-        .menu a:first-child { margin-left: 0; }
-
-        .menu a:hover { color: #0F52BA; }
-
-        html, body { height: 100%; }
-        body { display: flex; flex-direction: column; min-height: 100vh; }
-        .main { flex: 1; }
-
-        /* Banner 首屏 */
-        .banner {
-            width: 100%;
-            height: 550px;
-            background: linear-gradient(135deg, #f7f9fc 0%, #e6edf8 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
+        .nav-menu a {
+            color: #111;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px 0;
             position: relative;
+            transition: color 0.25s ease;
+        }
+
+        .nav-menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #0057CC;
+            transition: width 0.25s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:focus {
+            color: #0057CC;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a:focus::after {
+            width: 100%;
+        }
+
+        main {
             overflow: hidden;
         }
 
-        /* 背景装饰线条 */
-        .banner::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border: 1px solid rgba(15, 82, 186, 0.1);
-            border-radius: 50%;
-            top: -100px;
-            left: -100px;
+        .banner {
+            position: relative;
+            min-height: 640px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px 60px;
+            text-align: center;
+            background-image: url('首页背景图.jpg'), linear-gradient(135deg, #e6f2ff 0%, #f8fcff 100%);
+            background-repeat: no-repeat, no-repeat;
+            background-position: center, center;
+            background-size: cover, cover;
+            overflow: hidden;
         }
 
         .banner::after {
             content: "";
             position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid rgba(15, 82, 186, 0.1);
-            border-radius: 50%;
-            bottom: -150px;
-            right: -150px;
+            inset: 0;
+            background: rgba(230,242,255,0.45);
+            pointer-events: none;
         }
 
-        .banner h1 {
-            font-size: 44px;
-            color: #0F52BA;
-            margin-bottom: 18px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards 0.3s;
+        .banner-content {
+            position: relative;
+            max-width: 820px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
         }
 
-        .banner p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards 0.6s;
+        .banner-title {
+            position: relative;
+            z-index: 2;
+            font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+            color: #0057CC;
+            font-weight: 800;
+            line-height: 1.05;
         }
 
-        /* 模块标题 */
-        .section-title {
-            font-size: 32px;
-            color: #0F52BA;
-            text-align: center;
-            margin: 100px 0 50px 0;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
         }
 
-        .section-title.show {
-            opacity: 1;
-            transform: translateY(0);
+        .product-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(0,87,204,0.12);
+            color: #0f154c;
+            font-size: 14px;
+            font-weight: 600;
+            min-width: 110px;
         }
 
-        /* 关于我们 */
-        .about {
-            padding: 0 0 100px 0;
-            text-align: center;
-            font-size: 17px;
-            color: #444;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+        .banner-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
         }
 
-        .about.show {
-            opacity: 1;
-            transform: translateY(0);
+        .banner-actions a {
+            min-width: 150px;
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        /* 产品卡片 */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding-bottom: 120px;
+        .btn-primary {
+            color: #fff;
+            background: #0057CC;
+            border: 1px solid #0057CC;
+            box-shadow: 0 14px 32px rgba(0, 87, 204, 0.18);
         }
 
-        .product-card {
-            display: block;
+        .btn-secondary {
+            color: #0057CC;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 30px 20px;
+            border: 1px solid #0057CC;
+        }
+
+        .banner-actions a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 30px rgba(0, 87, 204, 0.14);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #0057CC;
             text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(30px);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-divider {
+            width: 64px;
+            height: 4px;
+            background: #0057CC;
+            margin: 0 auto 40px auto;
+            border-radius: 999px;
+        }
+
+        .about-panel {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 36px;
+            align-items: stretch;
+            margin-top: 20px;
+        }
+
+        .about-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 28px 26px;
+            box-shadow: 0 18px 40px rgba(0, 87, 204, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .about-card p {
+            color: #222;
+            font-size: 20px;
+            letter-spacing: 0.02em;
+            line-height: 1.9;
+        }
+
+        .about-card::after {
+            content: "";
+            width: 68px;
+            height: 4px;
+            background: #0057CC;
+            border-radius: 999px;
+            margin-top: 38px;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .about-images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px;
+            background: #f0f5ff;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 12px 28px rgba(0, 87, 204, 0.08);
             text-decoration: none;
             color: inherit;
         }
 
-        .product-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .product-card:hover {
+        .product-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(15, 82, 186, 0.1);
+            box-shadow: 0 22px 42px rgba(0, 87, 204, 0.16);
         }
 
-        .product-card:active {
-            transform: translateY(-4px) scale(0.98);
-            box-shadow: 0 18px 38px rgba(15, 82, 186, 0.15);
+        .product-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
         }
 
-        .product-card h3 {
-            font-size: 20px;
-            color: #0F52BA;
+        .product-body {
+            padding: 24px 20px 28px;
+        }
+
+        .product-name {
+            color: #0057CC;
+            font-size: 18px;
+            font-weight: 700;
             margin-bottom: 12px;
         }
 
-        .product-card p {
-            color: #666;
-            font-size: 15px;
+        .product-spec {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.8;
         }
 
-        /* 底部 */
         footer {
-            background: #0F52BA;
-            color: #fff;
+            background: #0057CC;
+            color: #ffffff;
             text-align: center;
-            padding: 35px 0;
+            padding: 32px 20px;
             font-size: 15px;
-            position: relative;
-            box-sizing: border-box;
-            width: 100vw;
-            left: 50%;
-            margin-left: -50vw;
+            line-height: 1.9;
         }
 
-        /* 动画关键帧 */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1100px) {
+            .about-panel,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-images {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-images img {
+                height: 170px;
             }
         }
 
-        /* 响应式适配 */
-        @media (max-width: 992px) {
-            .products {
-                grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+
+            .nav-menu {
+                gap: 18px;
+                width: 100%;
+            }
+
+            .banner {
+                padding: 80px 16px 50px;
+                min-height: 620px;
+            }
+
+            .about-card,
+            .product-item {
+                border-radius: 16px;
+            }
+
+            .product-grid {
+                gap: 20px;
             }
         }
 
         @media (max-width: 576px) {
-            .container.nav {
-                padding-left: 16px;
-                padding-right: 16px;
+            .banner {
+                min-height: 560px;
+                padding-top: 60px;
             }
 
-            .logo {
-                font-size: 18px;
-                line-height: 1.2;
+            .banner-title {
+                font-size: 1.9rem;
             }
 
-            .products {
-                grid-template-columns: 1fr;
+            .product-tags {
+                gap: 10px;
             }
-            .banner h1 {
-                font-size: 32px;
+
+            .product-tag {
+                padding: 10px 16px;
+                font-size: 13px;
             }
-            .menu a {
-                margin-left: 15px;
+
+            .banner-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-menu {
+                gap: 16px;
+            }
+
+            .about-images {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-images img {
+                height: 150px;
+            }
+
+            .banner-dots {
+                margin-top: 20px;
             }
         }
     </style>
 </head>
-
 <body>
-
-    <!-- 导航 -->
     <header>
-        <div class="logo">青岛谦腾能源化工有限公司</div>
-        <div class="container nav">
-            <div class="menu">
-                <a href="#home">首页</a>
-                <a href="#about">关于我们</a>
-                <a href="#products">产品</a>
-            </div>
+        <div class="container topbar">
+            <div class="brand"><span class="lang-zh">青岛谦腾能源化工有限公司</span><span class="lang-en">Qingdao Qianteng Energy Chemical Co., Ltd.</span></div>
+            <nav class="nav-menu">
+                <a href="#home"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a>
+                <a href="#about"><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span></a>
+                <a href="#products"><span class="lang-zh">产品中心</span><span class="lang-en">Products</span></a>
+                <a href="#contact"><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span></a>
+                <button type="button" class="lang-toggle">EN</button>
+            </nav>
         </div>
     </header>
 
-    <!-- 首页Banner -->
-    <main class="main">
-    <section class="banner" id="home">
-        <div>
-            <h1>青岛谦腾能源化工有限公司</h1>
-            <p>专业供应 PVC / EVA / 己二酸 / PET瓶片</p>
-        </div>
-    </section>
+    <main>
+        <section class="banner" id="home">
+            <div class="banner-content">
+                <h1 class="banner-title"><span class="lang-zh">青岛谦腾能源化工有限公司</span><span class="lang-en">Qingdao Qianteng Energy Chemical Co., Ltd.</span></h1>
+                <div class="product-tags">
+                    <a class="product-tag" href="pvc-detail.html">PVC</a>
+                    <a class="product-tag" href="eva-detail.html">EVA</a>
+                    <a class="product-tag" href="adipic-detail.html">己二酸</a>
+                    <a class="product-tag" href="pet-detail.html">PET瓶片</a>
+                </div>
+                <div class="banner-actions">
+                    <a class="btn-primary" href="#products"><span class="lang-zh">查看产品</span><span class="lang-en">View Products</span></a>
+                    <a class="btn-secondary" href="#contact"><span class="lang-zh">联系询价</span><span class="lang-en">Contact Us</span></a>
+                </div>
+            </div>
+        </section>
 
-    <!-- 关于我们 -->
-    <h2 class="section-title" id="about">关于我们</h2>
-    <section class="about container">
-        青岛谦腾能源化工有限公司隶属于聚宝盆资本集团，总部位于中国青岛，依托港口区位优势，在香港，马来西亚设有分公司。是一家立足中国，辐射全球的综合性能源化工及钢材贸易企业
-        
-   <!-- 产品中心 -->
-<h2 class="section-title" id="products">产品中心</h2>
-<section class="container products">
-  <a class="product-card" href="pvc-detail.html">
-    <h3>PVC 树脂</h3>
-    <p>工业级 / 通用级</p>
-  </a>
-  <a class="product-card" href="eva-detail.html">
-    <h3>EVA 树脂</h3>
-    <p>发泡级 / 薄膜级</p>
-  </a>
-    <a class="product-card" href="adipic-detail.html">
-        <h3>己二酸</h3>
-        <p>工业级 / 精己二酸</p>
-    </a>
-  <a class="product-card" href="pet-detail.html">
-    <h3>PET瓶片</h3>
-    <p>水 / 油 / 热 / 碳酸</p>
-  </a>
-</section>
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title"><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span></h2>
+                <div class="section-divider"></div>
+                <div class="about-panel">
+                    <div class="about-card">
+                        <p><span class="lang-zh">青岛谦腾能源化工有限公司隶属于聚宝盆资本集团，总部位于中国青岛，依托港口区位优势，在香港、马来西亚设有分公司。是一家立足中国，辐射全球的综合性能源化工及钢材贸易企业。主营：PVC/EVA/己二酸/PET瓶片/钢材进出口贸易。</span><span class="lang-en">Qingdao Qianteng Energy Chemical Co., Ltd. belongs to Jubaopen Capital Group, headquartered in Qingdao, China, with branches in Hong Kong and Malaysia. It is a comprehensive energy chemical and steel trading enterprise based in China and serving the world. Main products: PVC/EVA/Adipic Acid/PET bottle chips/steel import and export trade.</span></p>
+                    </div>
+                    <div class="about-images">
+                        <img src="img/pvc2.jpg" alt="化工厂区实景">
+                        <img src="img/eva1.jpg" alt="港口储罐实景">
+                        <img src="img/己二酸3.jpg" alt="码头货轮实景">
+                        <img src="img/pvc4.jpg" alt="化工厂区实景">
+                        <img src="img/pet4.jpg" alt="港口储罐实景">
+                        <img src="img/eva3.jpg" alt="码头货轮实景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="products">
+            <div class="container">
+                <h2 class="section-title"><span class="lang-zh">产品中心</span><span class="lang-en">Products</span></h2>
+                <div class="section-divider"></div>
+                <div class="product-grid">
+                    <a class="product-item" href="pvc-detail.html">
+                        <img class="product-img" src="img/pvc1.jpg" alt="PVC管材实拍">
+                        <div class="product-body">
+                            <div class="product-name"><span class="lang-zh">PVC树脂</span><span class="lang-en">PVC Resin</span></div>
+                            <div class="product-spec"><span class="lang-zh">工业级 / 通用级</span><span class="lang-en">Industrial / General</span></div>
+                        </div>
+                    </a>
+                    <a class="product-item" href="eva-detail.html">
+                        <img class="product-img" src="img/eva2.jpg" alt="EVA颗粒原料">
+                        <div class="product-body">
+                            <div class="product-name"><span class="lang-zh">EVA树脂</span><span class="lang-en">EVA Resin</span></div>
+                            <div class="product-spec"><span class="lang-zh">发泡级 / 薄膜级</span><span class="lang-en">Foaming / Film</span></div>
+                        </div>
+                    </a>
+                    <a class="product-item" href="adipic-detail.html">
+                        <img class="product-img" src="img/己二酸2.jpg" alt="己二酸晶体">
+                        <div class="product-body">
+                            <div class="product-name"><span class="lang-zh">己二酸</span><span class="lang-en">Adipic Acid</span></div>
+                            <div class="product-spec"><span class="lang-zh">工业级 / 精己二酸</span><span class="lang-en">Industrial / Adipic Acid</span></div>
+                        </div>
+                    </a>
+                    <a class="product-item" href="pet-detail.html">
+                        <img class="product-img" src="img/pet2.jpg" alt="PET透明瓶片原料">
+                        <div class="product-body">
+                            <div class="product-name"><span class="lang-zh">PET瓶片</span><span class="lang-en">PET Bottle Chips</span></div>
+                            <div class="product-spec"><span class="lang-zh">水 / 油 / 热 / 碳酸</span><span class="lang-en">Water / Oil / Hot / Carbonated</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
-    <!-- 底部 -->
-    <footer>
-        © 2026 青岛谦腾能源化工有限公司 版权所有
-        <br>
-        电话：+86 13863943281
-        <br>
-        地址：山东省青岛市市北区卓越世纪中心1号楼3908
-        <br>
-        邮箱：postmaster@qiantengenergy.com
+
+    <footer id="contact">
+        <div class="container">
+            <span class="lang-zh">© 2026 青岛谦腾能源化工有限公司 版权所有<br>电话: +86 13863943281<br>地址: 山东省青岛市市北区卓越世纪中心1号楼3908<br>邮箱: postmaster@qiantengenergy.com</span>
+            <span class="lang-en">© 2026 Qingdao Qianteng Energy Chemical Co., Ltd. All rights reserved.<br>Phone: +86 13863943281<br>Address: Room 3908, Tower 1, Excellence Century Center, Shibei District, Qingdao, China<br>Email: postmaster@qiantengenergy.com</span>
+        </div>
     </footer>
-
-    <!-- 滚动动画JS -->
     <script>
-        // 监听滚动，给元素添加show类，实现慢慢出现效果
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
+        (function() {
+            const langKey = 'siteLang';
+            const toggleButton = document.querySelector('.lang-toggle');
+            const root = document.documentElement;
+            function setLanguage(lang) {
+                root.classList.remove('lang-zh', 'lang-en');
+                root.classList.add('lang-' + lang);
+                if (toggleButton) {
+                    toggleButton.textContent = lang === 'zh' ? 'EN' : '中文';
                 }
-            });
-        }, { threshold: 0.1 });
-
-        // 所有需要动画的元素
-        document.querySelectorAll('.section-title, .about, .product-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // 导航栏滚动效果
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.08)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.9)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                localStorage.setItem(langKey, lang);
             }
-        });
+            const saved = localStorage.getItem(langKey) || 'zh';
+            setLanguage(saved);
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function() {
+                    setLanguage(root.classList.contains('lang-zh') ? 'en' : 'zh');
+                });
+            }
+        })();
     </script>
-
 </body>
 </html>

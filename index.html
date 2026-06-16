@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="青岛谦腾能源化工有限公司, 青岛化工公司, 能源化工, 化工原料供应, PVC供应, PET供应, EVA供应, 己二酸供应, 化工产品经销, 化工贸易, 化工原料批发, 塑料原料, 化工供应链, 青岛化工贸易公司">
-    <title>青岛谦腾能源化工有限公司 - PVC EVA 己二酸 PET瓶片专业供应商</title>
+    <meta name="description" content="青岛谦腾能源化工有限公司总部位于中国青岛，依托港口区位优势，在香港、马来西亚设有分公司，是一家立足中国、辐射全球的综合性能源化工及钢材贸易企业。">
+    <meta property="og:title" content="青岛谦腾能源化工有限公司">
+    <meta property="og:description" content="青岛谦腾能源化工有限公司总部位于中国青岛，依托港口区位优势，在香港、马来西亚设有分公司，是一家立足中国、辐射全球的综合性能源化工及钢材贸易企业。">
+    <title>青岛谦腾能源化工有限公司</title>
 
     <style>
         * {
@@ -52,13 +55,42 @@
 
         .brand {
             color: #111;
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 0.04em;
+            font-family: "FZYaSongS-R-GB", "HYQiHei 45S", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+            font-weight: 400;
             text-align: left;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 158px;
+            line-height: 1;
+        }
+
+        .brand-cn {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+
+        .brand-en {
+            display: block;
+            width: 100%;
+            margin-top: 3px;
+            font-family: "Times New Roman", Georgia, serif;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.035em;
+            text-transform: uppercase;
+            color: #333;
+            white-space: nowrap;
         }
 
         .brand-logo {
@@ -66,13 +98,13 @@
             height: 52px;
             flex: 0 0 52px;
             border-radius: 50%;
-            background: #fff url("img/company-logo.jpg") center 40% / 170% auto no-repeat;
+            background: #fff url("img/company-logo.jpg") center 56% / 220% auto no-repeat;
         }
 
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 30px;
             margin-left: auto;
             flex-wrap: wrap;
         }
@@ -86,7 +118,7 @@
             border: none;
             background: transparent;
             color: #111;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             padding: 6px 0;
@@ -95,7 +127,7 @@
         .nav-menu a {
             color: #111;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             padding: 6px 0;
             position: relative;
@@ -129,10 +161,10 @@
 
         .banner {
             position: relative;
-            width: 86%;
-            max-width: 1440px;
-            aspect-ratio: 16 / 9;
-            margin: 0 auto;
+            width: 100%;
+            height: calc(100svh - 72px);
+            min-height: 520px;
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -153,7 +185,7 @@
             inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
             opacity: 0;
             transition: opacity 1.6s ease;
@@ -330,7 +362,7 @@
             background: #0057CC;
             color: #ffffff;
             text-align: center;
-            padding: 32px 20px;
+            padding: 75px 20px;
             font-size: 15px;
             line-height: 1.9;
         }
@@ -360,10 +392,6 @@
                 width: 95%;
             }
 
-            .banner {
-                width: 94%;
-            }
-
             .topbar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -376,12 +404,32 @@
                 flex-basis: 44px;
             }
 
+            .brand {
+                gap: 10px;
+            }
+
+            .brand-cn {
+                font-size: 23px;
+            }
+
+            .brand-en {
+                font-size: 10px;
+                letter-spacing: 0.03em;
+            }
+
             .nav-menu {
                 gap: 18px;
                 width: 100%;
             }
 
+            .nav-menu a,
+            .lang-toggle {
+                font-size: 17px;
+            }
+
             .banner {
+                height: calc(100svh - 128px);
+                min-height: 420px;
                 padding: 0;
             }
 
@@ -413,6 +461,15 @@
                 gap: 16px;
             }
 
+            .brand-cn {
+                font-size: 21px;
+            }
+
+            .brand-en {
+                font-size: 9px;
+                letter-spacing: 0.025em;
+            }
+
             .about-images {
                 grid-template-columns: 1fr 1fr;
             }
@@ -432,8 +489,10 @@
         <div class="container topbar">
             <div class="brand">
                 <span class="brand-logo" aria-hidden="true"></span>
-                <span class="lang-zh">青岛谦腾能源化工有限公司</span>
-                <span class="lang-en">Qingdao Qianteng Energy Chemical Co., Ltd.</span>
+                <span class="brand-text" aria-label="谦腾能化 Qianteng Energy Chemical">
+                    <span class="brand-cn"><span>谦</span><span>腾</span><span>能</span><span>化</span></span>
+                    <span class="brand-en">Qianteng Energy Chemical</span>
+                </span>
             </div>
             <nav class="nav-menu">
                 <a href="#home"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a>
